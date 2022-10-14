@@ -1,19 +1,20 @@
 #!/usr/bin/python3
-'''
-Starts the flask application
-the flask runs on 0.0.0.0 on port 5000
-the home page should return hello hbnb
-'''
+"""Starts a Flask web application.
+
+The application listens on 0.0.0.0, port 5000.
+Routes:
+    /: Displays 'Hello HBNB!'
+"""
 from flask import Flask
 
 app = Flask(__name__)
-app.url_map.strict_slashes = False
 
-@app.route("/")
-def index():
-    '''
-    the home page and return hello hbnb
-    '''
+
+@app.route("/", strict_slashes=False)
+def hello_hbnb():
+    """Displays 'Hello HBNB!'"""
     return "Hello HBNB!"
 
-app.run(host="0.0.0.0")
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0")
