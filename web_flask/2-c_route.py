@@ -29,5 +29,6 @@ def c_text(text):
     """Displays 'C' followed by the value of <text>."""
     return "C " + text
 
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
