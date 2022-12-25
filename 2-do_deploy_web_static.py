@@ -9,7 +9,7 @@ Usage:
 """
 from fabric.api import env, put, run
 import os.path
-env.hosts = ["44.192.81.96", "3.236.224.97"]
+env.hosts = ["34.229.184.69", "52.91.124.65"]
 
 
 def do_deploy(archive_path):
